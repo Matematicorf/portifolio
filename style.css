@@ -1,0 +1,288 @@
+/* ==========================================================================
+   1. VARIÁVEIS E MODO ESCURO (THEME)
+   ========================================================================== */
+:root {
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-header: #1e293b;
+    --text-primary: #334155;
+    --text-heading: #0f172a;
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --border-color: #e2e8f0;
+    --input-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode {
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --bg-header: #0284c7;
+    --text-primary: #cbd5e1;
+    --text-heading: #f8fafc;
+    --border-color: #334155;
+    --input-bg: #334155;
+}
+
+/* ==========================================================================
+   2. RESET E ESTILOS BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO E MENU
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    padding: 1rem 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.theme-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. CONTAINERS DE CONTEÚDO & SPA
+   ========================================================================== */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.container h2 {
+    color: var(--text-heading);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Classe vital para a troca de seções via JS */
+.oculto {
+    display: none !important;
+}
+
+.bloco-formacao {
+    margin-bottom: 1.5rem;
+}
+
+.bloco-formacao h4 {
+    color: var(--accent-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.bloco-formacao ul {
+    padding-left: 1.2rem;
+}
+
+.bloco-formacao li {
+    margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   5. PORTFÓLIO (CARDS)
+   ========================================================================== */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: var(--bg-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    color: var(--text-heading);
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. SEÇÃO CONTATO & FORMULÁRIO
+   ========================================================================== */
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.info-contato h3, .form-contato h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.info-contato p {
+    margin-bottom: 0.8rem;
+}
+
+.info-contato a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.info-contato a:hover {
+    text-decoration: underline;
+}
+
+.form-contato .campo {
+    margin-bottom: 1rem;
+}
+
+.form-contato label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--text-heading);
+}
+
+.form-contato input, 
+.form-contato textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-heading);
+}
+
+.form-contato input:focus, 
+.form-contato textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.btn-enviar {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+}
