@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Rafael </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <header class="header">
+        <div class="logo">
+            <a href="#">MeuPortfólio</a>
+        </div>
+
+        <!-- Botão Hambúrguer para Celular -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+            &#9776;
+        </button>
+
+        <!-- Menu com Links -->
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão de Tema -->
+        <button id="toggle-theme" class="theme-btn">🌙 Alternar Tema</button>
+    </header>
+
+    <main>
+        <!-- Seção 1: Sobre mim (Contém o Perfil + Stack Tecnológica) -->
+        <section id="sobre" class="container secao-conteudo">
+            <h2>Sobre Mim</h2>
+            <p><strong>Desenvolvedor Full Stack | TypeScript, Angular, Supabase (PostgreSQL) </strong></p>
+            <p>Atuo na criação de soluções digitais completas: da arquitetura de interfaces até a estruturação de bancos de dados e regras de negócio. Foco em entregar aplicações modernas, seguras e focadas em resultados.</p>
+
+            <h3 style="margin-top: 1.5rem; color: #0284c7;">🚀 Principais Competências & Stack Tecnológica</h3>
+
+            <article class="bloco-formacao">
+                <h4>Front-end & Aplicações Web</h4>
+                <ul>
+                    <li><strong>Linguagens & Base:</strong> HTML5 semântico, CSS3 (responsividade e layouts modernos) e TypeScript.</li>
+                    <li><strong>Frameworks:</strong> Construção de SPAs robustas com Angular e React, uso de componentes reutilizáveis, gestão de estado e rotas protegidas (Routing & Guards).</li>
+                    <li><strong>UX/UI:</strong> Interfaces intuitivas, fluidas e otimizadas para mobile e desktop.</li>
+                </ul>
+            </article>
+
+            <article class="bloco-formacao">
+                <h4>Back-end, Banco de Dados & Segurança</h4>
+                <ul>
+                    <li><strong>BaaS & Relacional:</strong> Modelagem e manipulação de dados com PostgreSQL e Supabase.</li>
+                    <li><strong>Autenticação:</strong> Implementação de fluxos completos de cadastro, gestão de sessões e controle de acesso seguro.</li>
+                    <li><strong>APIs:</strong> Consumo e integração eficiente de APIs RESTful com tratamento de requisições HTTP.</li>
+                </ul>
+            </article>
+
+            <article class="bloco-formacao">
+                <h4>E-Commerce</h4>
+                <ul>
+                   
+                 
+                    <li><strong>Lojas Virtuais:</strong> E-commerces completos (incluindo nichos técnicos como eletrônicos), com configuração de catálogo, estoque e gateways de pagamento.</li>
+                 <a href="https://matematicorf.github.io/Eletronicos/header">
+                 Meu Portfólio
+                </a>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Seção 2: Formação (Começa oculta) -->
+        <section id="formacao" class="container secao-conteudo oculto">
+            <h2>Formação Acadêmica & Cursos</h2>
+            <article class="bloco-formacao">
+                <ul>
+                    <li><strong>Ensino Superior:</strong> Análise de desenvolvimento de sistemas</li>
+                    <li><strong>Habilidades:</strong> Desenvolvimento Web Full Stack, TypeScript, Angular, Supabase e WordPress</li>
+                    <li><strong>Idiomas:</strong> Português (Nativo), Inglês (intermediário, avançado)</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Seção 3: Portfólio (Começa oculta) -->
+        <section id="portfolio" class="container secao-conteudo oculto">
+            <h2>💡 Projetos & Diferenciais</h2>
+            <div class="grid-projetos">
+                
+
+                <article class="card">
+                    <h3>E-Commerce & Portais</h3>
+                    <p>Soluções de vendas otimizadas para conversão e plataformas de conteúdo com foco em performance.</p>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </article>
+
+               
+            </div>
+        </section>
+
+        <!-- Seção 4: Contato (Começa oculta) -->
+        <section id="contato" class="container secao-conteudo oculto">
+            <h2>Contato</h2>
+
+            <div class="contato-grid">
+                <!-- Informações Pessoais -->
+                <div class="info-contato">
+                    <h3>Informações Pessoais</h3>
+                    <p><strong>Nome:</strong> Rafael Alex</p>
+                    <p><strong>Telefone / WhatsApp:</strong> <a href="https://wa.me/5513991861016" target="_blank">(13) 99186-1016</a></p>
+                    <p><strong>E-mail:</strong> <a href="mailto:rafaelalexalvesmourass@gmail.com">rafaelalexalvesmourass@gmail.com</a></p>
+                    <p><strong>Endereço:</strong> Rua Rosinha Siqueira Viegas, 526 - Jardim Rio Branco - CEP 11347-050</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rafael-alves-b015241bb" target="_blank" rel="noopener noreferrer">Perfil Profissional</a></p>
+                </div>
+
+                <!-- Formulário de Mensagem -->
+                <form id="form-contato" class="form-contato">
+                    <h3>Envie uma mensagem</h3>
+                    
+                    <div class="campo">
+                        <label for="nome">Nome Completo:*</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:*</label>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem:*</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    <p id="msg-status" class="msg-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script carregado antes de fechar o body -->
+    <script src="script.js"></script>
+</body>
+</html>
